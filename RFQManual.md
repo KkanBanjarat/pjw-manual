@@ -67,12 +67,12 @@
         **สูตรการคำนวน Processing Cost (C)**
         | Topic | สูตร | 
         | ---- | ---- | 
-        | Cost : Process MC Rate | Rate ที่ Pricing Judge * (CycleTime / 3600) |
-        | Cost : DL | (Rate ที่ Pricing Judge * Man) * (CycleTime / 3600) |
-        | Cost : Big Booth (Painting Process) | Rate ที่ Pricing Judge /  Cavity(Hanger) |
-        | Cost : Small Booth (Painting Process) | ((CycleTime / Cavity) / 3600) x Rate ที่ Pricing Judge |
-        | Cost : Machine Robot | Rate ที่ Pricing Judge * (CycleTime / 3600) |
-        | Amount : Cost * Quantity |
+        | Amount : Process MC Rate | (Rate ที่ Pricing Judge * Quantity) * (CycleTime[PerShot] / 3600 / Cavity) |
+        | Amount : DL | (Rate ที่ Pricing Judge * Man) * (CycleTime[PerShot] / 3600 / Cavity) |
+        | Amount : DL Assembly | (CycleTime / 3600) * Rate ที่ Pricing Judge |
+        | Amount : Big Booth (Painting Process) | Rate ที่ Pricing Judge /  Cavity(Hanger) |
+        | Amount : Small Booth โรง C และ E (Painting Process) | ((CycleTime / Cavity) / 3600) x Rate ที่ Pricing Judge |
+        | Amount : Machine Robot | Rate ที่ Pricing Judge * (CycleTime / 3600) |
 >    
 4. **Packing Cost (D)**
     * `ระบบจะดึงเฉพาะข้อมูล Packing Concept เฉพาะประเภท Packing FG เท่านั้น`
